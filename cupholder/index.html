@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фабрика «Капхолдер» — капхолдеры с логотипом и упаковка для кафе</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark">7К</span><span><b>Капхолдер</b><small>фабрика упаковки · с&nbsp;2005 года</small></span></a>
+    <nav class="nav">
+      <a href="#calc">Цены</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="#clients-block">Работы</a>
+      <a href="#visit">Самовывоз</a>
+      <a href="#faq-block">Вопросы</a>
+    </nav>
+    <a class="phone" href="tel:+79046171817">+7&nbsp;(904)&nbsp;617‑18‑17</a>
+    <a class="btn" href="#order">Заявка</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Фабрика в&nbsp;Санкт-Петербурге</span>
+      <h1>Капхолдеры с&nbsp;вашим логотипом <em>от&nbsp;первых в&nbsp;России</em></h1>
+      <p class="lead">Валентин Квиринг придумал российский капхолдер «на&nbsp;крючке» в&nbsp;2005 году. С&nbsp;тех пор фабрика делает капхолдеры, держатели и&nbsp;коробки для&nbsp;кофеен, пекарен и&nbsp;стрит-фуда.</p>
+      <div class="actions">
+        <a class="btn" href="#calc">Рассчитать тираж</a>
+        <a class="btn ghost" href="catalog.html">Каталог упаковки</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>от&nbsp;100 шт.</b>минимальный тираж с&nbsp;логотипом</div>
+        <div class="fact"><b>10 дней</b>рабочих&nbsp;— срок производства</div>
+        <div class="fact"><b>от&nbsp;1,75&nbsp;₽</b>готовые капхолдеры со&nbsp;склада</div>
+      </div>
+    </div>
+    <div class="cup-art">
+      <svg viewBox="0 0 300 360" aria-hidden="true">
+        <path d="M70 70 L230 70 L208 330 Q207 340 196 340 L104 340 Q93 340 92 330 Z" fill="#FFFFFF"/>
+        <rect x="58" y="44" width="184" height="30" rx="10" fill="#3A2A1E"/>
+        <rect x="80" y="30" width="140" height="20" rx="8" fill="#3A2A1E"/>
+        <path d="M80 150 L220 150 L212 250 L88 250 Z" fill="#EE7A2F"/>
+        <path d="M80 150 L220 150 L219 162 L81 162 Z" fill="#D0611A"/>
+        <path d="M88 238 L212 238 L212 250 L88 250 Z" fill="#D0611A"/>
+        <path d="M213 172 q14 14 0 28" stroke="#3A2A1E" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <text x="148" y="206" text-anchor="middle" font-family="Unbounded, Arial" font-size="15" font-weight="700" fill="#fff">ВАШ ЛОГО</text>
+      </svg>
+      <div class="tag"><b>Нужно от&nbsp;вас:</b> фото капхолдера на&nbsp;стакане&nbsp;— живое, из&nbsp;ваших работ</div>
+    </div>
+  </div>
+</section>
+
+<div class="gofra"></div>
+
+<section class="dark" id="calc">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Сколько стоит</span><h2>Посчитайте тираж сами&nbsp;— за&nbsp;минуту</h2></div>
+      <p class="muted" style="max-width:380px">Цена&nbsp;— самый частый вопрос в&nbsp;группе: его&nbsp;задавали 10 раз. Здесь ответ сразу, без&nbsp;ожидания менеджера.</p>
+    </div>
+    <div class="calc">
+      <div class="form">
+        <label>Какой капхолдер</label>
+        <div class="models" id="models"></div>
+        <label for="qty">Тираж, штук</label>
+        <div class="qty-row">
+          <input type="number" id="qty" value="3000" min="0" step="100">
+          <input type="range" id="qty-range" min="100" max="10000" step="100" value="3000" aria-label="Тираж">
+        </div>
+        <div class="presets" id="presets">
+          <button class="chip" data-q="100">100</button>
+          <button class="chip" data-q="1000">1000</button>
+          <button class="chip" data-q="3000">3000</button>
+          <button class="chip" data-q="5000">5000</button>
+          <button class="chip" data-q="10000">10&nbsp;000</button>
+        </div>
+      </div>
+      <div class="result">
+        <span>Цена за&nbsp;штуку с&nbsp;печатью</span>
+        <div class="per" id="per">—</div>
+        <div class="total" id="total"></div>
+        <div class="warn" id="calc-warn"></div>
+        <p class="fine">Цена примерная, без&nbsp;НДС, не&nbsp;оферта&nbsp;— точную назовёт менеджер по&nbsp;вашему макету. Срок производства&nbsp;— 10 рабочих дней.</p>
+        <a class="btn" href="#order">Получить точный расчёт</a>
+      </div>
+    </div>
+    <span class="src">Цены&nbsp;— прайс-лист cupholder.ru, 06.11.2026</span>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Каталог</span><h2>Всё из&nbsp;картона для&nbsp;кафе&nbsp;— в&nbsp;одной поставке</h2></div>
+      <a class="btn ghost" href="catalog.html">Весь&nbsp;каталог</a>
+    </div>
+    <div class="cats" id="sections"></div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Со&nbsp;склада</span><h2>Можно забрать уже&nbsp;сегодня</h2></div>
+      <p class="muted" style="max-width:380px">Готовые изделия продаются упаковками от&nbsp;50 штук. Наличие на&nbsp;прототипе&nbsp;— для&nbsp;примера.</p>
+    </div>
+    <div class="grid" id="picks"></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">Почему у&nbsp;нас</span>
+    <h2 style="max-width:760px">Конструкторское бюро и&nbsp;фабрика в&nbsp;одном месте</h2>
+    <div class="why" style="margin-top:32px">
+      <div><b>2005</b><p>Валентин Квиринг разработал первый российский капхолдер. Первым заказчиком в&nbsp;2007 году стала «Идеальная Чашка».</p></div>
+      <div><b>Без&nbsp;клея</b><p>Крепление «на&nbsp;крючке»: капхолдер собирается за&nbsp;секунду и&nbsp;подходит на&nbsp;стаканы 250–500 мл.</p></div>
+      <div><b>Под&nbsp;размер</b><p>Свой конструктор: сделаем держатель или&nbsp;коробку под&nbsp;ваш&nbsp;продукт. Так&nbsp;появились вафхолдер и&nbsp;«Скоробок».</p></div>
+      <div><b>0&nbsp;₽</b><p>за&nbsp;доставку до&nbsp;транспортной компании при&nbsp;заказе от&nbsp;6000&nbsp;₽&nbsp;— и&nbsp;в&nbsp;Петербурге в&nbsp;пределах КАД.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="clients-block">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Наши работы</span><h2>Капхолдеры для&nbsp;сетей и&nbsp;событий</h2></div>
+      <p class="muted" style="max-width:380px">Заказчики из&nbsp;постов фабрики. В&nbsp;галерее будут фото капхолдеров на&nbsp;стаканах.</p>
+    </div>
+    <div class="clients" id="clients"></div>
+    <div class="grid" style="margin-top:28px">
+      <div class="ph"><span>Фото: капхолдер «Диско 80-х» для&nbsp;Chess & Jazz</span></div>
+      <div class="ph"><span>Фото: капхолдер для&nbsp;«33 Пингвина»</span></div>
+      <div class="ph"><span>Фото: серия с&nbsp;художниками-авангардистами</span></div>
+      <div class="ph"><span>Фото: капхолдер для&nbsp;OMG Coffee</span></div>
+    </div>
+    <span class="need">Нужно от&nbsp;вас: можно&nbsp;ли называть этих заказчиков на&nbsp;сайте и&nbsp;фото работ в&nbsp;хорошем качестве.</span>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Как&nbsp;заказать капхолдер с&nbsp;логотипом</span>
+    <h2>Четыре шага до&nbsp;тиража</h2>
+    <div class="steps" style="margin-top:28px">
+      <div><h3>Заявка</h3><p>Выберите модель и&nbsp;тираж в&nbsp;калькуляторе и&nbsp;пришлите логотип&nbsp;— лучше в&nbsp;векторе.</p></div>
+      <div><h3>Макет</h3><p>Разместим логотип на&nbsp;макете сами и&nbsp;согласуем с&nbsp;вами.</p></div>
+      <div><h3>Оплата</h3><p>Работаем по&nbsp;100% предоплате: счёт для&nbsp;юрлиц или&nbsp;перевод.</p></div>
+      <div><h3>Тираж</h3><p>10 рабочих дней. Самовывоз, доставка по&nbsp;Петербургу или&nbsp;ПЭК, СДЭК, Boxberry.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Отзывы</span><h2>Что&nbsp;говорят заказчики</h2></div>
+      <p class="muted">4,5 на&nbsp;Яндекс Картах · 24 оценки</p>
+    </div>
+    <div class="reviews" id="reviews"></div>
+  </div>
+</section>
+
+<section class="alt" id="tips">
+  <div class="wrap">
+    <span class="eyebrow">Советы фабрики</span>
+    <h2>Капхолдер как&nbsp;реклама кофейни</h2>
+    <div class="tips" id="tips-list" style="margin-top:28px"></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div>
+      <span class="eyebrow">Самовывоз</span>
+      <h2>Как&nbsp;нас найти</h2>
+      <p><span class="open-now" data-open-now>Открыто сейчас</span></p>
+      <dl>
+        <dt>Адрес</dt><dd>Санкт-Петербург, наб. Обводного канала, 74Ж, 2 этаж</dd>
+        <dt>Метро</dt><dd>Фрунзенская</dd>
+        <dt>Режим</dt><dd>Пн–Пт 10:00–18:00</dd>
+        <dt>Телефон</dt><dd><a href="tel:+79046171817">+7&nbsp;(904)&nbsp;617‑18‑17</a> · WhatsApp, Telegram</dd>
+        <dt>Почта</dt><dd><a href="mailto:cupholder@yandex.ru">cupholder@yandex.ru</a></dd>
+      </dl>
+      <div class="pass"><b>Возьмите документ с&nbsp;фото.</b> Мы&nbsp;на&nbsp;территории завода «Композит», вход через&nbsp;КПП&nbsp;— пропустят по&nbsp;паспорту, правам или&nbsp;студенческому.</div>
+      <a class="btn" href="https://yandex.ru/maps/org/cupholder_ru/1721922988/" target="_blank" rel="noopener">Построить маршрут</a>
+      <span class="need">Нужно от&nbsp;вас: какой телефон главный&nbsp;— в&nbsp;группах и&nbsp;на&nbsp;сайтах их&nbsp;шесть.</span>
+    </div>
+    <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.330578%2C59.909629&z=16&pt=30.330578%2C59.909629%2Cpm2orl" title="Фабрика «Капхолдер» на Яндекс Картах" loading="lazy"></iframe></div>
+  </div>
+</section>
+
+<section class="alt" id="faq-block">
+  <div class="wrap">
+    <span class="eyebrow">Частые вопросы</span>
+    <h2>Отвечаем, как&nbsp;в&nbsp;группе</h2>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<section class="dark" id="order">
+  <div class="wrap order">
+    <div>
+      <span class="eyebrow">Заявка</span>
+      <h2>Пришлите логотип&nbsp;— посчитаем точно</h2>
+      <p class="muted">Ответим в&nbsp;рабочее время. Можно сразу написать в&nbsp;WhatsApp или&nbsp;Telegram: +7&nbsp;(904)&nbsp;617‑18‑17.</p>
+      <span class="need">Нужно от&nbsp;вас: куда&nbsp;приходят заявки с&nbsp;сайта&nbsp;— почта, Telegram или&nbsp;CRM.</span>
+    </div>
+    <form data-demo>
+      <input type="hidden" id="order-calc" name="calc">
+      <div class="two"><input placeholder="Имя" required><input placeholder="Телефон" type="tel" required></div>
+      <input placeholder="Кафе или компания">
+      <textarea placeholder="Что нужно: модель, тираж, сроки"></textarea>
+      <label class="file"><input type="file"><span>Прикрепить логотип</span></label>
+      <button class="btn" type="submit">Отправить заявку</button>
+      <p class="small muted" style="margin:0">Это&nbsp;прототип: заявка никуда не&nbsp;отправляется.</p>
+      <div class="thanks"><h3>Спасибо!</h3><p>Менеджер свяжется с&nbsp;вами и&nbsp;пришлёт макет.</p></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Фабрика «Капхолдер» · 7КАП</b><br>Капхолдеры, держатели и&nbsp;упаковка для&nbsp;кафе. Санкт-Петербург, наб. Обводного канала, 74Ж.</div>
+    <div><b>Связаться</b><br><a href="tel:+79046171817">+7&nbsp;(904)&nbsp;617‑18‑17</a><br><a href="mailto:cupholder@yandex.ru">cupholder@yandex.ru</a></div>
+    <div><b>Разделы</b><br><a href="catalog.html">Каталог</a><br><a href="#calc">Калькулятор</a><br><a href="#visit">Самовывоз</a></div>
+    <div class="note">Прототип сайта. Цены&nbsp;— с&nbsp;cupholder.ru и&nbsp;7cupstore.ru на&nbsp;06.11.2026, наличие&nbsp;— для&nbsp;примера, фото&nbsp;— заглушки. Подготовила Катя.</div>
+  </div>
+</footer>
+
+<script src="js/typo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

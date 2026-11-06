@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Товар — Фабрика «Капхолдер»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark">7К</span><span><b>Капхолдер</b><small>фабрика упаковки · с&nbsp;2005 года</small></span></a>
+    <nav class="nav">
+      <a href="index.html#calc">Цены</a>
+      <a href="catalog.html" class="active">Каталог</a>
+      <a href="index.html#clients-block">Работы</a>
+      <a href="index.html#visit">Самовывоз</a>
+      <a href="index.html#faq-block">Вопросы</a>
+    </nav>
+    <a class="phone" href="tel:+79046171817">+7&nbsp;(904)&nbsp;617‑18‑17</a>
+    <a class="btn" href="#order">Заявка</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <a id="crumb-sec" href="catalog.html"></a> / <span id="crumb-item"></span></div>
+  <div class="item" id="item"></div>
+</div>
+<section>
+  <div class="wrap">
+    <h2>Ещё&nbsp;из&nbsp;каталога</h2>
+    <div class="grid" id="more" style="margin-top:24px"></div>
+  </div>
+</section>
+
+<section class="dark" id="order">
+  <div class="wrap order">
+    <div>
+      <span class="eyebrow">Заявка</span>
+      <h2>Заказать или&nbsp;уточнить наличие</h2>
+      <p class="muted">Ответим в&nbsp;рабочее время. Можно сразу написать в&nbsp;WhatsApp или&nbsp;Telegram: +7&nbsp;(904)&nbsp;617‑18‑17.</p>
+    </div>
+    <form data-demo>
+      <input type="hidden" id="order-calc" name="calc">
+      <div class="two"><input placeholder="Имя" required><input placeholder="Телефон" type="tel" required></div>
+      <input placeholder="Кафе или компания">
+      <textarea placeholder="Сколько нужно и к какому сроку"></textarea>
+      <label class="file"><input type="file"><span>Прикрепить логотип</span></label>
+      <button class="btn" type="submit">Отправить заявку</button>
+      <p class="small muted" style="margin:0">Это&nbsp;прототип: заявка никуда не&nbsp;отправляется.</p>
+      <div class="thanks"><h3>Спасибо!</h3><p>Менеджер свяжется с&nbsp;вами.</p></div>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div><b>Фабрика «Капхолдер» · 7КАП</b><br>Капхолдеры, держатели и&nbsp;упаковка для&nbsp;кафе. Санкт-Петербург, наб. Обводного канала, 74Ж.</div>
+    <div><b>Связаться</b><br><a href="tel:+79046171817">+7&nbsp;(904)&nbsp;617‑18‑17</a><br><a href="mailto:cupholder@yandex.ru">cupholder@yandex.ru</a></div>
+    <div><b>Разделы</b><br><a href="catalog.html">Каталог</a><br><a href="index.html#calc">Калькулятор</a><br><a href="index.html#visit">Самовывоз</a></div>
+    <div class="note">Прототип сайта. Цены&nbsp;— с&nbsp;cupholder.ru и&nbsp;7cupstore.ru на&nbsp;06.11.2026, наличие&nbsp;— для&nbsp;примера, фото&nbsp;— заглушки. Подготовила Катя.</div>
+  </div>
+</footer>
+
+<script src="js/typo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
