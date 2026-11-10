@@ -273,3 +273,22 @@ footer .note { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.12);
 .faq p { max-width: 68ch; }
 .faq summary, .card h3, .cat h3, .cat p, .model span, .tag { text-wrap: balance; }
 .calc label.model { display: flex; margin: 0; font-weight: 400; }
+
+/* Правки после анализа 10.11.2026 */
+.hero .actions { align-items: center; margin-bottom: 16px; }
+.more-link { color: var(--brown); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--kraft-light); }
+.more-link:hover { border-color: var(--orange); }
+.rating { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 28px; font-size: 14px; color: var(--muted); text-decoration: none; }
+.rating .stars { color: var(--orange); letter-spacing: 1px; }
+.rating b { color: var(--ink); }
+.who { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.who div { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.who h3 { margin: 0; font-size: 18px; }
+.who p { margin: 0; color: var(--muted); font-size: 15px; }
+.who .ex { font-size: 13px; font-weight: 600; color: var(--brown); background: var(--kraft-light); border-radius: 8px; padding: 6px 10px; }
+.who a { margin-top: auto; padding-top: 6px; color: var(--cta); font-weight: 700; text-decoration: none; }
+.promise { color: #fff; }
+.order form .check { display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; }
+.order form .check input { width: 18px; height: 18px; padding: 0; flex: none; accent-color: var(--orange); }
+@media (max-width: 1080px) { .who { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .who { grid-template-columns: 1fr; } }

@@ -161,7 +161,10 @@
       '<div class="box"><h4>Кому подходит</h4><p style="margin:0">' + tx(it.who) + '</p></div>' +
       '<p class="src">Источник: ' + tx(it.src) + '. Наличие — для примера.</p></div>';
     var more = $("#more");
-    if (more) more.innerHTML = ITEMS.filter(function (i) { return i.sec === it.sec && i.id !== it.id; }).concat(ITEMS.filter(function (i) { return i.sec !== it.sec; })).slice(0, 4).map(card).join("");
+    /* С этим часто заказывают: сначала соседние разделы, потом свой */
+    var pairs = { logo: ["carry", "ready"], ready: ["carry", "box"], food: ["box", "carry"], carry: ["ready", "food"], box: ["carry", "food"] };
+    var rel = (pairs[it.sec] || []).reduce(function (acc, s) { return acc.concat(ITEMS.filter(function (i) { return i.sec === s; }).slice(0, 2)); }, []);
+    if (more) more.innerHTML = rel.concat(ITEMS.filter(function (i) { return i.sec === it.sec && i.id !== it.id; })).slice(0, 4).map(card).join("");
     var hidden = $("#order-calc");
     if (hidden) hidden.value = it.title;
   }
@@ -182,6 +185,14 @@
     html += '<p class="src">По материалам: ' + tx(a.src) + '</p><p style="margin-top:28px"><a class="btn" href="index.html#calc">Рассчитать свой тираж</a></p>';
     art.innerHTML = html;
   }
+
+  /* Кнопка «Получить образец» отмечает галочку в заявке */
+  document.querySelectorAll("[data-sample]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var box = $("#want-sample");
+      if (box) box.checked = true;
+    });
+  });
 
   /* Заявка — демо */
   document.querySelectorAll("form[data-demo]").forEach(function (f) {
