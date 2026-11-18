@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js"
+3:I[75961,["$2"],"Header"]
+4:I[39756,["$2"],"default"]
+5:I[37457,["$2"],"default"]
+6:I[22016,["$2"],""]
+7:I[75961,["$2"],"Footer"]
+b:I[97367,["$2"],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[97367,["$2"],"$e"]
+11:"MetadataBoundary"
+12:I[97367,["$2"],"$11"]
+14:I[68027,["$2"],"default",1]
+:HL["/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","style"]
+9:X
+a:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","div",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Страница не найдена"}],["$","p",null,{"children":"Выберите другой объект в каталоге демонстрационных квартир."}]]}],["$","$L6",null,{"className":"button button-primary","href":"/apartments","children":"В каталог квартир"}]]}],null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":"/_not-found","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$9"},"c":"$Qa"}]]
+0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main","children":"К содержанию"}],["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","div",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Страница не найдена"}],["$","p",null,{"children":"Выберите другой объект в каталоге демонстрационных квартир."}]]}],["$","$L6",null,{"className":"button button-primary","href":"/apartments","children":"В каталог квартир"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L7",null,{}]]}]}]]}],"p":false,"v":null},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"sugOezEQGQzJdyBDbu7Qr"}
+9:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+13:[["$","title","0",{"children":"Ключи города — квартиры посуточно в Санкт-Петербурге"}],["$","meta","1",{"name":"description","content":"Демонстрационный сайт посуточной аренды квартир. Подберите вариант для поездки и попробуйте оставить заявку."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}]]

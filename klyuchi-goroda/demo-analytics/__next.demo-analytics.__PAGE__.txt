@@ -1,0 +1,32 @@
+1:"$Sreact.fragment"
+2:"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js"
+3:I[75961,["$2"],"Header"]
+4:I[39756,["$2"],"default"]
+5:I[37457,["$2"],"default"]
+6:"/prototipy/klyuchi-goroda/_next/static/chunks/2tlpewycl6ve0.js"
+7:I[22016,["$2","$6"],""]
+8:I[75961,["$2"],"Footer"]
+f:"DemoAnalyticsPanel"
+10:I[9896,["$2","$6"],"$f"]
+11:I[97367,["$2"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:"ViewportBoundary"
+16:I[97367,["$2"],"$15"]
+17:"MetadataBoundary"
+18:I[97367,["$2"],"$17"]
+:HL["/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","style"]
+a:X
+d:X
+d:C
+e:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","header",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Демо-аналитика"}],["$","p",null,{"children":"Учебные показатели текущей вкладки. Счётчики показывают действия на демосайте. Значения полей заявки в них не попадают."}]]}],["$","$L10",null,{}],["$","$L7",null,{"href":"/apartments","className":"button button-primary mt-6","children":"Перейти в каталог"}]]}],[["$","script","script-0",{"src":"/prototipy/klyuchi-goroda/_next/static/chunks/2tlpewycl6ve0.js","async":true}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":"$@14","v":null,"s":"$a"}}]]
+b:[["children",{"s":"demo-analytics","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@c","v":"$d","s":"$a"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","precedence":"next"}],["$","script","script-0",{"src":"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js","async":true}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main","children":"К содержанию"}],["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}],"notFound":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","div",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Страница не найдена"}],["$","p",null,{"children":"Выберите другой объект в каталоге демонстрационных квартир."}]]}],["$","$L7",null,{"className":"button button-primary","href":"/apartments","children":"В каталог квартир"}]]}],[]]}],["$","$L8",null,{}]]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Демо-аналитика — Ключи города"}],["$","meta","1",{"name":"description","content":"Учебные счётчики действий на сайте в текущей вкладке браузера."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}]]}]}],null]}],null]}],"p":"$@19","v":null,"s":"$a"}},"a":"$@1a","u":"$@1b","b":"sugOezEQGQzJdyBDbu7Qr"}
+13:null
+a:300
+1b:true
+a:C
+1a:0
+c:"$undefined"
+9:"$undefined"
+19:"$undefined"
+14:"$undefined"

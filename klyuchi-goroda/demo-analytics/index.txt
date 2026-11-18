@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js"
+3:I[75961,["$2"],"Header"]
+4:I[39756,["$2"],"default"]
+5:I[37457,["$2"],"default"]
+6:"/prototipy/klyuchi-goroda/_next/static/chunks/2tlpewycl6ve0.js"
+7:I[22016,["$2","$6"],""]
+8:I[75961,["$2"],"Footer"]
+c:"DemoAnalyticsPanel"
+d:I[9896,["$2","$6"],"$c"]
+e:I[97367,["$2"],"OutletBoundary"]
+f:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$2"],"$11"]
+14:"MetadataBoundary"
+15:I[97367,["$2"],"$14"]
+17:I[68027,["$2"],"default",1]
+:HL["/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","style"]
+:HC["/",""]
+a:X
+b:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","header",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Демо-аналитика"}],["$","p",null,{"children":"Учебные показатели текущей вкладки. Счётчики показывают действия на демосайте. Значения полей заявки в них не попадают."}]]}],["$","$Ld",null,{}],["$","$L7",null,{"href":"/apartments","className":"button button-primary mt-6","children":"Перейти в каталог"}]]}],[["$","script","script-0",{"src":"/prototipy/klyuchi-goroda/_next/static/chunks/2tlpewycl6ve0.js","async":true,"nonce":"$undefined"}]],["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":false,"v":null}}]]
+9:[["children",{"s":"demo-analytics","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$a"},"c":"$Qb"}]]
+0:{"P":null,"c":["","demo-analytics",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/prototipy/klyuchi-goroda/_next/static/chunks/3sqi-l00i53kq.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main","children":"К содержанию"}],["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"id":"main","className":"shell inner-page","tabIndex":-1,"children":[["$","div",null,{"className":"inner-heading","children":[["$","h1",null,{"children":"Страница не найдена"}],["$","p",null,{"children":"Выберите другой объект в каталоге демонстрационных квартир."}]]}],["$","$L7",null,{"className":"button button-primary","href":"/apartments","children":"В каталог квартир"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L8",null,{}]]}]}]]}],"p":false,"v":null},"c":"$Q9"},"h":{"r":["$","$1","h",{"children":[null,["$","$L12",null,{"children":"$L13"}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":"$L16"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$17",[["$","link","0",{"rel":"stylesheet","href":"/prototipy/klyuchi-goroda/_next/static/chunks/04gmrcc526c0u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"sugOezEQGQzJdyBDbu7Qr"}
+a:C
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+10:null
+16:[["$","title","0",{"children":"Демо-аналитика — Ключи города"}],["$","meta","1",{"name":"description","content":"Учебные счётчики действий на сайте в текущей вкладке браузера."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}]]
