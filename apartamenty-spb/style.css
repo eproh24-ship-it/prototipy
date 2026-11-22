@@ -560,7 +560,6 @@ h3 { font-size: 26px; }
   .flat-page { padding-bottom: 70px; }
   .toc { position: static; display: flex; flex-wrap: wrap; gap: 8px; }
   .toc a { border: 1px solid var(--line); border-radius: 30px; padding: 8px 14px; font-size: 14px; }
-  .about__photo { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 640px) {
   .container { padding: 0 16px; }
