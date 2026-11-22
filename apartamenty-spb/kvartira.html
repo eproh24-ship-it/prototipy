@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Квартира — Невский Квартал</title>
+  <meta name="description" content="Апартаменты посуточно в Санкт-Петербурге: фото, удобства, свободные даты и онлайн-бронирование.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2323272b'/><text x='16' y='23' font-family='Georgia' font-size='20' fill='%23b08d57' text-anchor='middle'>Н</text></svg>">
+</head>
+<body>
+
+<header class="header header--solid">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+    <nav class="nav" id="nav">
+      <a href="index.html#catalog" class="active">Квартиры</a>
+      <a href="index.html#mapToggle">Районы</a>
+      <a href="index.html#reviews">Отзывы</a>
+      <a href="sobstvennikam.html">Собственникам</a>
+      <a href="pravila.html">Правила</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <a href="#booking" class="btn btn--brass header__cta">Забронировать</a>
+    <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="flat-page">
+  <div class="container">
+    <nav class="crumbs"><a href="index.html">Главная</a> / <a href="index.html#catalog">Квартиры</a> / <span id="crumbTitle"></span></nav>
+    <div class="flat-head">
+      <div>
+        <h1 id="fTitle"></h1>
+        <div class="flat-head__meta" id="fMeta"></div>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+
+    <div class="flat-layout">
+      <div>
+        <section class="flat-block">
+          <div class="key-specs" id="keySpecs"></div>
+        </section>
+        <section class="flat-block">
+          <h2>О квартире</h2>
+          <div class="flat-text" id="fText"></div>
+          <div class="feature-tags" id="fTags"></div>
+        </section>
+        <section class="flat-block">
+          <h2>Что есть в квартире</h2>
+          <div class="amenities">
+            <div class="amenity"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V6h12v4"/></svg>Спальня</h3>
+              <ul><li>Ортопедический матрас</li><li>Отельное бельё из сатина</li><li>Плотные шторы блэкаут</li><li>Шкаф и вешалки</li></ul></div>
+            <div class="amenity"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v8a3 3 0 0 0 6 0V3M8 3v18M17 3c-2 0-3 3-3 6s1 4 3 4v8"/></svg>Кухня</h3>
+              <ul><li>Кофемашина и зерновой кофе</li><li>Посудомоечная машина</li><li>Посуда, бокалы, кастрюли</li><li>Чай, сахар, соль, масло</li></ul></div>
+            <div class="amenity"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0"/></svg>Ванная</h3>
+              <ul><li>Полотенца и халаты</li><li>Шампунь, гель, кондиционер</li><li>Фен</li><li>Стиральная машина</li></ul></div>
+            <div class="amenity"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8M12 17v4"/></svg>Работа и отдых</h3>
+              <ul><li>Wi-Fi 300 Мбит/с</li><li>Рабочий стол и удобный стул</li><li>Smart TV с Кинопоиском</li><li>Утюг и гладильная доска</li></ul></div>
+          </div>
+        </section>
+        <section class="flat-block">
+          <h2>Расположение</h2>
+          <iframe class="flat-map" id="flatMap" title="Расположение квартиры на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
+          <ul class="nearby" id="nearby"></ul>
+        </section>
+        <section class="flat-block">
+          <h2>Правила</h2>
+          <div class="rules" id="rules"></div>
+          <p class="muted" style="margin-top:16px;font-size:14px">Подробнее — на странице <a href="pravila.html" style="color:var(--green);font-weight:600">«Правила и FAQ»</a>.</p>
+        </section>
+        <section class="flat-block">
+          <h2 id="revTitle">Отзывы</h2>
+          <div class="flat-reviews" id="flatReviews"></div>
+        </section>
+      </div>
+
+      <!-- МОДУЛЬ БРОНИРОВАНИЯ -->
+      <aside class="booking" id="booking">
+        <div class="booking__price"><div><b id="bPrice"></b> <span>/ ночь</span></div><span id="bRating"></span></div>
+        <div class="booking__dates">
+          <div id="bInBox" class="focus"><small>Заезд</small><b id="bIn">Выберите</b></div>
+          <div id="bOutBox"><small>Выезд</small><b id="bOut">—</b></div>
+        </div>
+        <div class="cal" id="cal"></div>
+        <div class="booking__guests">
+          <div><small>Гости</small><b id="bGuestsText">2 гостя</b></div>
+          <div class="counter"><button type="button" id="gMinus" aria-label="Меньше гостей">−</button><b id="gCount">2</b><button type="button" id="gPlus" aria-label="Больше гостей">+</button></div>
+        </div>
+        <button class="btn btn--brass btn--full" id="bBtn" disabled>Выберите даты</button>
+        <p class="booking__hint" id="bHint">Нажмите на дату заезда в календаре</p>
+        <ul class="calc" id="calc" hidden></ul>
+        <div class="booking__safe"><span>Бесплатная отмена за 7 дней и более до заезда. При отмене менее чем за 7 дней до заезда предоплата не возвращается.</span></div>
+      </aside>
+    </div>
+
+    <section class="section" style="padding-bottom:90px">
+      <div class="section__head"><div><p class="label">Ещё варианты</p><h2>Похожие квартиры</h2></div></div>
+      <div class="grid" id="similar"></div>
+    </section>
+  </div>
+</main>
+
+<div class="mobile-book" id="mobileBook">
+  <div><b id="mbPrice"></b> <span>/ ночь</span><br><span id="mbDates">Выберите даты</span></div>
+  <a href="#booking" class="btn btn--brass">Забронировать</a>
+</div>
+
+<!-- Окно оформления брони -->
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-close aria-label="Закрыть">×</button>
+    <div id="orderStep">
+      <div class="steps-mini"><span class="on">1. Данные</span><span>→</span><span>2. Подтверждение</span></div>
+      <h3 id="orderTitle" style="font-size:34px">Оформление брони</h3>
+      <div class="order-sum" id="orderSum"></div>
+      <form id="orderForm" class="field-stack" style="display:grid;gap:14px">
+        <div class="grid-2">
+          <div class="field"><label for="oName">Имя и фамилия</label><input id="oName" required placeholder="Как в паспорте"></div>
+          <div class="field"><label for="oPhone">Телефон</label><input id="oPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+        </div>
+        <div class="field"><label for="oEmail">E-mail</label><input id="oEmail" type="email" required placeholder="Пришлём договор и подтверждение"></div>
+        <div class="grid-2">
+          <div class="field"><label for="oTime">Во сколько приедете</label>
+            <select id="oTime"><option>15:00–18:00</option><option>18:00–21:00</option><option>21:00–00:00</option><option>После полуночи</option><option>Нужен ранний заезд</option></select></div>
+          <div class="field"><label for="oDocs">Документы для работы</label>
+            <select id="oDocs"><option value="">Не нужны</option><option>Нужны (физлицо)</option><option>Нужны (оплата от компании)</option></select></div>
+        </div>
+        <div class="field"><label for="oNote">Пожелания</label><textarea id="oNote" placeholder="Детская кроватка, парковка, поздний выезд…"></textarea></div>
+        <ul class="calc" id="orderCalc" style="margin:0"></ul>
+        <label class="check"><input type="checkbox" required> <span>Согласен(-на) с <a href="pravila.html" target="_blank">правилами проживания</a> и <a href="documents.html#privacy" target="_blank" rel="noopener">политикой обработки данных</a></span></label>
+        <button class="btn btn--brass btn--full" type="submit" id="payBtn">Перейти к оплате</button>
+        <p class="muted" style="font-size:12px;text-align:center">Демо-сайт: оплата не списывается, данные никуда не отправляются.</p>
+      </form>
+    </div>
+    <div id="successStep" class="success" hidden></div>
+  </div>
+</div>
+
+<!-- Просмотр фото -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" type="button" aria-label="Закрыть">×</button>
+  <button class="lightbox__prev" type="button" aria-label="Предыдущее фото">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox__next" type="button" aria-label="Следующее фото">›</button>
+  <div class="lightbox__count" id="lbCount"></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+        <p>Дизайнерские апартаменты посуточно в Санкт-Петербурге.</p>
+      </div>
+      <div>
+        <h4>Гостям</h4>
+        <ul>
+          <li><a href="index.html#catalog">Наши апартаменты</a></li>
+          <li><a href="index.html#mapToggle">Квартиры на карте</a></li>
+          <li><a href="index.html#reviews">Отзывы гостей</a></li>
+          <li><a href="pravila.html">Правила проживания</a></li>
+          <li><a href="pravila.html#docs">Документы для командировок</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="index.html#about">О компании и команде</a></li>
+          <li><a href="sobstvennikam.html">Собственникам</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Помощь гостям</h4>
+        <ul>
+          <li><a href="index.html#contacts">Связаться с менеджером</a></li>
+          <li><a href="index.html#faq">Частые вопросы</a></li>
+          <li class="footer-messengers"><span>На связи 24/7</span><span class="footer-messengers__icons"><a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#38BDF6"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5zM9.6 14l8.9-5.6c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.1z"/></svg></a><a href="https://web.max.ru/" target="_blank" rel="noopener noreferrer" aria-label="MAX"><svg aria-hidden="true" viewBox="0 0 24 24" fill="url(#footer-max-brand-gradient)"><defs><linearGradient id="footer-max-brand-gradient" x2="1" y2="1"><stop stop-color="#00BFFF"/><stop offset=".52" stop-color="#471AFF"/><stop offset="1" stop-color="#9500FF"/></linearGradient></defs><path fill-rule="evenodd" d="M12 2a10 10 0 1 1-5.4 18.4L2.8 21l.7-4A10 10 0 0 1 12 2Zm.2 4.8a5.3 5.3 0 0 0-4.4 8.3l-.4 1.7 1.8-.4a5.3 5.3 0 1 0 3-9.6Z"/></svg></a><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.3z"/></svg></a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 «Невский Квартал» · <a href="documents.html#privacy">Политика конфиденциальности</a> · <a href="documents.html#offer">Договор оферты</a></span>
+      <span><span class="demo-note">Демо-сайт: компания и квартиры вымышлены.</span> Сайт сделала Екатерина Прохневич</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="flat.js"></script>
+</body>
+</html>
+

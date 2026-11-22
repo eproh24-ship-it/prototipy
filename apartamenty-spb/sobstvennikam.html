@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Собственникам — сдать квартиру в управление | Невский Квартал</title>
+  <meta name="description" content="Сдайте квартиру в Петербурге в посуточное управление: фото, гости, уборка и отчёты — на нас. Рассчитайте доход онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2323272b'/><text x='16' y='23' font-family='Georgia' font-size='20' fill='%23b08d57' text-anchor='middle'>Н</text></svg>">
+</head>
+<body class="owners-page">
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+    <nav class="nav" id="nav">
+      <a href="index.html#catalog">Квартиры</a>
+      <a href="index.html#mapToggle">Районы</a>
+      <a href="index.html#reviews">Отзывы</a>
+      <a href="sobstvennikam.html" class="active">Собственникам</a>
+      <a href="pravila.html">Правила</a>
+      <a href="#owner-form">Контакты</a>
+    </nav>
+    <a href="#calc" class="btn btn--brass header__cta">Рассчитать доход</a>
+    <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- 1. ПЕРВЫЙ ЭКРАН -->
+<section class="owner-hero">
+  <div class="hero__bg"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=2000&q=80&auto=format&fit=crop" alt="Гостиная с камином"></div>
+  <div class="container hero__content">
+    <nav class="crumbs" style="color:rgba(255,255,255,.6)"><a href="index.html">Главная</a> / <span>Собственникам</span></nav>
+    <p class="hero__tag"><b>до ×2</b> больше, чем при долгосрочной аренде</p>
+    <h1 class="owner-hero__title">Сдайте квартиру в управление&nbsp;–<br>доход без хлопот</h1>
+    <p class="hero__text">Возьмём на себя всё: фото, объявления, гостей, уборку и ремонт мелочей. Вы получаете деньги и отчёт каждый месяц.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#calc" class="btn btn--brass">Рассчитать доход</a>
+      <a href="#owner-form" class="btn btn--line">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. СИТУАЦИИ СОБСТВЕННИКА -->
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Узнаёте себя?</h2></div>
+      <p>Большинство собственников приходят к нам с одной из этих ситуаций.</p>
+    </div>
+    <div class="situations reveal">
+      <div class="situation"><h3>«Сдаю сам — устал»</h3><p>Звонки в два часа ночи, поиск уборщицы, гости, которые не могут найти парадную.</p></div>
+      <div class="situation"><h3>«Квартира простаивает»</h3><p>Досталась в наследство или купили для инвестиций, а она стоит пустая и только тратит деньги.</p></div>
+      <div class="situation"><h3>«Живу в другом городе»</h3><p>Квартира в Петербурге, а вы — в Москве или за границей. Следить за ней некому.</p></div>
+      <div class="situation"><h3>«Долгосрок приносит мало»</h3><p>Жильцы платят 45 000 ₽, а квартира в хорошем месте могла бы приносить вдвое больше.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. КАЛЬКУЛЯТОР -->
+<section class="section section--cream" id="calc">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Сколько принесёт ваша квартира</h2></div>
+      <p>Расчёт по средней загрузке наших квартир за 2025–2026 годы. Точную сумму назовём после осмотра.</p>
+    </div>
+    <div class="calc-box reveal">
+      <form class="calc-box__form" id="incomeForm">
+        <h3>Ваша квартира</h3>
+        <div class="opt-group"><span>Район</span>
+          <div class="opts">
+            <label><input type="radio" name="zone" value="center" checked><span>Исторический центр</span></label>
+            <label><input type="radio" name="zone" value="near"><span>Рядом с центром</span></label>
+            <label><input type="radio" name="zone" value="sleep"><span>Спальный район</span></label>
+          </div>
+        </div>
+        <div class="opt-group"><span>Комнат</span>
+          <div class="opts">
+            <label><input type="radio" name="rooms" value="studio" checked><span>Студия</span></label>
+            <label><input type="radio" name="rooms" value="one"><span>1 комната</span></label>
+            <label><input type="radio" name="rooms" value="two"><span>2 комнаты</span></label>
+            <label><input type="radio" name="rooms" value="three"><span>3+</span></label>
+          </div>
+        </div>
+        <div class="opt-group"><span>Состояние</span>
+          <div class="opts">
+            <label><input type="radio" name="state" value="design" checked><span>Дизайнерский ремонт</span></label>
+            <label><input type="radio" name="state" value="good"><span>Хороший ремонт</span></label>
+            <label><input type="radio" name="state" value="need"><span>Нужно обновить</span></label>
+          </div>
+        </div>
+        <div class="opt-group"><span>Особенности</span>
+          <div class="opts">
+            <label><input type="checkbox" name="extra" value="view"><span>Вид на воду или собор</span></label>
+            <label><input type="checkbox" name="extra" value="metro"><span>До метро до 7 минут</span></label>
+          </div>
+        </div>
+      </form>
+      <div class="calc-box__result" aria-live="polite">
+        <small>Ваш доход в месяц</small>
+        <div class="income" id="income">— ₽</div>
+        <p>уже после нашей комиссии, уборки и расходников</p>
+        <div class="compare">
+          <div class="compare__row"><div><span>Посуточно с нами</span><b id="cmpDaily"></b></div><div class="compare__bar"><i id="barDaily"></i></div></div>
+          <div class="compare__row compare__row--long"><div><span>Долгосрочная аренда</span><b id="cmpLong"></b></div><div class="compare__bar"><i id="barLong"></i></div></div>
+        </div>
+        <p id="incomeNote"></p>
+        <a href="#owner-form" class="btn btn--brass" style="margin-top:18px;align-self:flex-start">Получить точный расчёт</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ЧТО БЕРЁМ НА СЕБЯ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Что мы берём на себя</h2></div>
+      <p>Вам не нужно ничего делать — даже приезжать в Петербург.</p>
+    </div>
+    <div class="services reveal">
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="10" width="30" height="22" rx="2"/><circle cx="20" cy="21" r="6"/><path d="M14 10l2-4h8l2 4"/></svg><h3>Подготовка и фото</h3><p>Подскажем, что докупить, сделаем профессиональную съёмку и напишем описание.</p></div>
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 30l8-8 6 6 14-14"/><path d="M26 14h8v8"/></svg><h3>Объявления и цены</h3><p>Размещаем на сайте, Островке, Суточно и Авито. Цена меняется каждый день под спрос.</p></div>
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 32c0-6 5-10 12-10s12 4 12 10"/><circle cx="20" cy="13" r="6"/></svg><h3>Гости 24/7</h3><p>Проверяем гостей, отвечаем на вопросы днём и ночью, решаем любые проблемы.</p></div>
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 34V18M28 34V18M6 18h28L20 6z"/></svg><h3>Уборка и бельё</h3><p>Отельный клининг после каждого гостя, своя прачечная, расходники и косметика.</p></div>
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 8a8 8 0 0 0-10 10L6 26l4 4 8-8a8 8 0 0 0 10-10l-5 5-4-4z"/></svg><h3>Ремонт мелочей</h3><p>Свой мастер: перегоревшая лампа или сломанный смеситель — за пару часов.</p></div>
+      <div class="service"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="5" width="22" height="30" rx="2"/><path d="M14 13h12M14 19h12M14 25h7"/></svg><h3>Отчёты и налоги</h3><p>Каждый месяц — отчёт по броням и деньгам. Работаем по договору, платим налоги.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. УСЛОВИЯ -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Честно и прозрачно</h2></div>
+    </div>
+    <div class="terms reveal">
+      <div class="term"><b>20%</b><h3>Наша комиссия</h3><p>От суммы броней. Без абонентской платы — если квартира не сдаётся, мы ничего не получаем.</p></div>
+      <div class="term"><b>10-го</b><h3>Выплаты каждый месяц</h3><p>Переводим деньги на карту или счёт до 10 числа с подробным отчётом по каждой брони.</p></div>
+      <div class="term"><b>3 мес.</b><h3>Минимальный срок</h3><p>Договор на 3 месяца с автопродлением. Расторгнуть можно, предупредив за 30 дней.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. ШАГИ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Первые гости — через 2 недели</h2></div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="step__num">01</span><h3>Заявка</h3><p>Оставляете заявку — в тот же день перезваниваем и задаём пару вопросов.</p></div>
+      <div class="step"><span class="step__num">02</span><h3>Осмотр</h3><p>Приезжаем, оцениваем квартиру и называем точный прогноз дохода.</p></div>
+      <div class="step"><span class="step__num">03</span><h3>Подготовка</h3><p>Подписываем договор, докомплектуем квартиру, ставим электронный замок, снимаем фото.</p></div>
+      <div class="step"><span class="step__num">04</span><h3>Первые гости</h3><p>Публикуем объявления — первые брони обычно приходят в первую же неделю.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. КЕЙС -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section__head reveal"><div><h2>Было и стало</h2></div></div>
+    <div class="case reveal">
+      <div class="case__img"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1100&q=80&auto=format&fit=crop" alt="Студия на Фонтанке после подготовки" loading="lazy"></div>
+      <div class="case__body">
+        <h3>Студия на Фонтанке, 34 м²</h3>
+        <p>Елена получила квартиру в наследство и 4 года сдавала её надолго. Мы обновили текстиль, свет и посуду — вложения 180 000 ₽ окупились за 4 месяца.</p>
+        <div class="case__nums">
+          <div><small>Было: долгосрок</small><b>42 000 ₽</b></div>
+          <div class="after"><small>Стало: с нами</small><b>89 000 ₽</b></div>
+        </div>
+        <p style="margin:0">Средняя загрузка — 84%, рейтинг гостей — 4,9.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="section">
+  <div class="container faq">
+    <div class="reveal"><h2>Частые вопросы собственников</h2></div>
+    <div class="faq__list reveal">
+      <details><summary>А если гости что-то сломают?</summary><p>С каждого гостя берём залог 10 000–20 000 ₽. Мелкий ущерб покрывается из залога, крупный — по договору с гостем. За 3 года серьёзных случаев не было.</p></details>
+      <details><summary>Могу ли я сам жить в квартире иногда?</summary><p>Да. Просто закройте нужные даты в личном кабинете или напишите менеджеру — заранее, чтобы на них не было броней.</p></details>
+      <details><summary>Кто платит коммунальные услуги?</summary><p>Коммунальные платежи остаются на собственнике, но мы можем оплачивать их сами из дохода и показывать в отчёте.</p></details>
+      <details><summary>Это законно?</summary><p>Да. Мы работаем по договору управления, гости живут по договору краткосрочного найма. Помогаем собственнику оформить самозанятость или ИП и платить налог.</p></details>
+      <details><summary>Какие квартиры вы берёте?</summary><p>Студии и квартиры до 3 комнат в центре и спальных районах рядом с метро. Если нужен ремонт — подскажем, что сделать, чтобы окупить его быстрее.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. ФОРМА -->
+<section class="section section--dark" id="owner-form">
+  <div class="container cta">
+    <div class="cta__text reveal">
+      <h2>Узнайте точный доход от вашей квартиры</h2>
+      <p>Оставьте телефон — управляющая перезвонит сегодня, задаст пару вопросов и предложит удобное время для осмотра. Это бесплатно и ни к чему не обязывает.</p>
+      <div class="messengers">
+        <a href="tel:+78120000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+7 (812) 000-00-00</a>
+        <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5zM9.6 14l8.9-5.6c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.1z"/></svg>Telegram</a>
+      </div>
+    </div>
+    <form class="form reveal" id="ownerForm">
+      <h3>Заявка собственника</h3>
+      <div class="field"><label for="ofName">Имя</label><input id="ofName" required placeholder="Как к вам обращаться"></div>
+      <div class="field"><label for="ofPhone">Телефон</label><input id="ofPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+      <div class="field"><label for="ofAddr">Адрес или район квартиры</label><input id="ofAddr" placeholder="Например: Лиговский пр., студия 30 м²"></div>
+      <label class="check"><input type="checkbox" required checked> <span>Согласен(-на) с <a href="documents.html#privacy" target="_blank" rel="noopener">политикой обработки персональных данных</a></span></label>
+      <button class="btn btn--brass btn--full" type="submit">Получить расчёт</button>
+      <div class="form__ok"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2"><circle cx="30" cy="30" r="27"/><path d="M19 31l7 7 15-16"/></svg><h3>Заявка отправлена</h3><p class="muted">Мария перезвонит вам сегодня до 21:00.</p></div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+        <p>Дизайнерские апартаменты посуточно в Санкт-Петербурге.</p>
+      </div>
+      <div>
+        <h4>Гостям</h4>
+        <ul>
+          <li><a href="index.html#catalog">Наши апартаменты</a></li>
+          <li><a href="index.html#mapToggle">Квартиры на карте</a></li>
+          <li><a href="index.html#reviews">Отзывы гостей</a></li>
+          <li><a href="pravila.html">Правила проживания</a></li>
+          <li><a href="pravila.html#docs">Документы для командировок</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="index.html#about">О компании и команде</a></li>
+          <li><a href="sobstvennikam.html">Собственникам</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Помощь гостям</h4>
+        <ul>
+          <li><a href="index.html#contacts">Связаться с менеджером</a></li>
+          <li><a href="index.html#faq">Частые вопросы</a></li>
+          <li class="footer-messengers"><span>На связи 24/7</span><span class="footer-messengers__icons"><a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#38BDF6"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5zM9.6 14l8.9-5.6c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.1z"/></svg></a><a href="https://web.max.ru/" target="_blank" rel="noopener noreferrer" aria-label="MAX"><svg aria-hidden="true" viewBox="0 0 24 24" fill="url(#footer-max-brand-gradient)"><defs><linearGradient id="footer-max-brand-gradient" x2="1" y2="1"><stop stop-color="#00BFFF"/><stop offset=".52" stop-color="#471AFF"/><stop offset="1" stop-color="#9500FF"/></linearGradient></defs><path fill-rule="evenodd" d="M12 2a10 10 0 1 1-5.4 18.4L2.8 21l.7-4A10 10 0 0 1 12 2Zm.2 4.8a5.3 5.3 0 0 0-4.4 8.3l-.4 1.7 1.8-.4a5.3 5.3 0 1 0 3-9.6Z"/></svg></a><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.3z"/></svg></a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 «Невский Квартал» · <a href="documents.html#privacy">Политика конфиденциальности</a> · <a href="documents.html#offer">Договор оферты</a></span>
+      <span><span class="demo-note">Демо-сайт: компания и квартиры вымышлены.</span> Сайт сделала Екатерина Прохневич</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+/* ---------- Калькулятор дохода собственника ---------- */
+(function () {
+  const NIGHT = { center: { studio: 5200, one: 7000, two: 9500, three: 12500 }, near: { studio: 4300, one: 5800, two: 7800, three: 10000 }, sleep: { studio: 3600, one: 4900, two: 6600, three: 8500 } };
+  const LOAD = { center: 0.78, near: 0.74, sleep: 0.70 };
+  const LONG = { center: { studio: 42000, one: 55000, two: 80000, three: 110000 }, near: { studio: 36000, one: 45000, two: 62000, three: 85000 }, sleep: { studio: 32000, one: 40000, two: 55000, three: 72000 } };
+  const STATE = { design: 1.1, good: 1, need: 0.85 };
+  const form = document.getElementById("incomeForm");
+  const val = (n) => form.querySelector(`input[name="${n}"]:checked`).value;
+
+  function calc() {
+    const z = val("zone"), r = val("rooms"), s = val("state");
+    const extras = [...form.querySelectorAll('input[name="extra"]:checked')].map((i) => i.value);
+    let night = NIGHT[z][r] * STATE[s];
+    if (extras.includes("view")) night *= 1.12;
+    if (extras.includes("metro")) night *= 1.05;
+    const gross = night * 30 * LOAD[z];
+    const net = Math.round((gross * 0.8 - 6000) / 1000) * 1000;   // минус комиссия 20% и расходники
+    const long = LONG[z][r];
+    document.getElementById("income").textContent = "≈ " + money(net);
+    document.getElementById("cmpDaily").textContent = money(net);
+    document.getElementById("cmpLong").textContent = money(long);
+    const max = Math.max(net, long);
+    document.getElementById("barDaily").style.width = (net / max * 100) + "%";
+    document.getElementById("barLong").style.width = (long / max * 100) + "%";
+    const diff = net - long;
+    document.getElementById("incomeNote").textContent = diff > 0
+      ? `Это на ${money(diff)} больше в месяц — или ${money(diff * 12)} за год.`
+      : "В этом случае долгосрочная аренда может быть выгоднее — честно расскажем на осмотре.";
+  }
+  form.addEventListener("change", calc);
+  calc();
+  demoForm(document.getElementById("ownerForm"));
+})();
+</script>
+</body>
+</html>
+
+

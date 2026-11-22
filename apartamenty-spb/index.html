@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Невский Квартал — дизайнерские апартаменты посуточно в Санкт-Петербурге</title>
+  <meta name="description" content="10 дизайнерских апартаментов посуточно в Петербурге: 6 в историческом центре и 4 в тихих районах. Бронирование напрямую, бесплатная отмена за 7 дней.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="yandex-maps-api-key" content="">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="trip.css"><link rel="stylesheet" href="hero.css"><link rel="stylesheet" href="guest-chat.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2323272b'/><text x='16' y='23' font-family='Georgia' font-size='20' fill='%23b08d57' text-anchor='middle'>Н</text></svg>">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+    <nav class="nav" id="nav">
+      <a href="#catalog">Квартиры</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="pravila.html">Правила</a>
+      <a href="sobstvennikam.html">Собственникам</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="#catalog" class="btn btn--brass header__cta">Забронировать</a>
+    <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- 1. ПЕРВЫЙ ЭКРАН -->
+<section class="hero hero--interior">
+  <div class="hero__bg"><img src="media/hero-interior.webp" alt="Гостиная с оливковыми стенами, светлым диваном и паркетом"></div>
+  <div class="container hero__content">
+    <div class="hero-lockup">
+      <h1><span>Апартаменты в Петербурге,</span><span>где хочется остаться</span></h1>
+      <div class="hero-ratings" role="group" aria-label="О сервисе">
+        <div class="hero-rating"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.8-5.4 2.8 1-6-4.4-4.3 6.1-.9Z"/></svg>4,9</b><small>Средняя оценка гостей</small></div>
+        <div class="hero-rating"><b><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m1 3a5 5 0 0 1 4 5v1"/></svg>2 400+</b><small>Гостей приняли</small></div>
+        <div class="hero-rating"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 1 16 0v5a4 4 0 0 1-4 4h-3"/><rect x="4" y="11" width="4" height="6" rx="1"/><rect x="16" y="11" width="4" height="6" rx="1"/></svg>24/7</b><small>Всегда на связи</small></div>
+      </div>
+    </div>
+
+    <form class="search" id="search">
+      <div class="search__field search-date"><label for="sIn">Заезд</label><span class="search-date-preview" aria-hidden="true">Выбрать</span><input type="date" id="sIn" required></div>
+      <div class="search__field search-date"><label for="sOut">Выезд</label><span class="search-date-preview" aria-hidden="true">Выбрать</span><input type="date" id="sOut" required></div>
+      <div class="search__field"><label for="sGuests">Гости</label>
+        <select id="sGuests"><option value="1">1 гость</option><option value="2" selected>2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option><option value="5">5 гостей</option></select>
+      </div>
+      <button class="btn btn--brass" type="submit" aria-label="Найти свободные"><span class="search-button-text">Найти свободные</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg>
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- 2. СИТУАЦИИ -->
+<section class="section" aria-labelledby="trip-heading">
+  <div class="container">
+    <div class="section-intro">
+      <h2 id="trip-heading">Подберём квартиры под вашу поездку</h2>
+      <p>Мы знаем каждую квартиру лично и подскажем, какая подойдёт именно вам.</p>
+    </div>
+    <div class="trip-picker">
+      <div class="trip-options" role="group" aria-label="Цель поездки">
+        <button type="button" aria-pressed="true" aria-controls="trip-weekend">Выходные вдвоём<span aria-hidden="true">→</span></button>
+        <button type="button" aria-pressed="false" aria-controls="trip-work">Командировка<span aria-hidden="true">→</span></button>
+        <button type="button" aria-pressed="false" aria-controls="trip-family">Семьёй с детьми<span aria-hidden="true">→</span></button>
+        <button type="button" aria-pressed="false" aria-controls="trip-long-stay">На месяц и дольше<span aria-hidden="true">→</span></button>
+      </div>
+      <div class="trip-preview" aria-live="polite">
+        <article id="trip-weekend" class="trip-panel">
+          <img src="media/trip-weekend.jpg" width="768" height="512" alt="" loading="lazy">
+          <div class="trip-caption">
+            <h3>Выходные вдвоём</h3>
+            <p>Хочется гулять по набережным, ужинать на Рубинштейна и просыпаться с видом на воду.</p>
+            <a href="#catalog" data-pick="center-2">Студии в центре →</a>
+          </div>
+        </article>
+        <article id="trip-work" class="trip-panel" hidden>
+          <img src="media/trip-work.jpg" width="768" height="512" alt="" loading="lazy">
+          <div class="trip-caption">
+            <h3>Командировка</h3>
+            <p>Нужны стол, быстрый Wi-Fi, тишина и закрывающие документы для бухгалтерии.</p>
+            <a href="pravila.html#docs">Про документы →</a>
+          </div>
+        </article>
+        <article id="trip-family" class="trip-panel" hidden>
+          <img src="media/trip-family.jpg" width="768" height="512" alt="" loading="lazy">
+          <div class="trip-caption">
+            <h3>Семьёй с детьми</h3>
+            <p>Две спальни, кухня, детская кроватка и стульчик — чтобы было как дома, а не в отеле.</p>
+            <a href="#catalog" data-pick="family">Квартиры для семьи →</a>
+          </div>
+        </article>
+        <article id="trip-long-stay" class="trip-panel" hidden>
+          <img src="media/trip-long-stay.jpg" width="768" height="512" alt="" loading="lazy">
+          <div class="trip-caption">
+            <h3>На месяц и дольше</h3>
+            <p>Переезд, ремонт или долгий проект. От 14 ночей — скидка 15%, от 28 ночей — 25%.</p>
+            <a href="#contacts">Узнать цену на месяц →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. КАТАЛОГ -->
+<section class="section section--cream" id="catalog">
+  <div class="container">
+    <div class="section-intro reveal">
+      <h2>Наши апартаменты</h2>
+      <p>Цены указаны за ночь. Уборка, бельё, полотенца и косметика уже включены.</p>
+    </div>
+    <div class="search-note" id="searchNote"><span id="searchNoteText"></span><button type="button" id="searchReset">Сбросить даты</button></div>
+    <div class="filters">
+      <button class="chip" type="button" id="mapToggle" aria-controls="catalogMap" aria-expanded="false">Смотреть на карте</button>
+      <div class="chips" id="typeChips">
+        <button class="chip active" data-type="all">Любые</button>
+        <button class="chip" data-type="studio">Студии</button>
+        <button class="chip" data-type="one">1-комнатные</button>
+        <button class="chip" data-type="two">2-комнатные</button>
+      </div>
+    </div>
+    <div id="catalogMap" hidden>
+      <p class="map-caption">На карте показано примерное расположение квартир.</p>
+      <div class="catalog-map-layout">
+        <iframe id="apartmentMap" title="Квартиры в Санкт-Петербурге на Яндекс Картах" allowfullscreen></iframe>
+        <div id="interactiveMap" aria-label="Карта квартир в Санкт-Петербурге" hidden></div>
+      </div>
+    </div>
+    <div class="catalog-carousel">
+      <div class="catalog-controls" role="group" aria-label="Листание квартир">
+        <button type="button" id="previousFlat" aria-controls="grid" aria-label="Предыдущая квартира">←</button>
+        <button type="button" id="nextFlat" aria-controls="grid" aria-label="Следующая квартира">→</button>
+      </div>
+      <div class="catalog-track" id="grid" role="region" aria-label="Каталог квартир"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ВЫГОДЫ С ФАКТАМИ -->
+<section class="section section--green" id="benefits">
+  <div class="container benefits">
+    <header class="benefits__heading reveal">
+      
+      <h2>Сервис отеля, уют квартиры</h2>
+    </header>
+      <ul class="benefit-list reveal">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 18v-5a7 7 0 0 1 14 0v5"/><rect x="10" y="18" width="24" height="20" rx="4"/><path d="M17 24h1m4 0h1m4 0h1m-11 5h1m4 0h1m4 0h1"/></svg>
+          <div><h3>Бесконтактное заселение</h3><p>За день до приезда пришлём код от двери и короткую видеоинструкцию. В день заезда приезжайте в любое время с 15:00, даже ночью. Ждать ключи не придётся.</p></div>
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="12" y="8" width="20" height="28" rx="2"/><path d="M17 15h10M17 21h10M17 27h6"/></svg>
+          <div><h3>Документы для командировок</h3><p>Договор, кассовый чек и закрывающие документы — в день выезда, по ЭДО или на почту.</p></div>
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l12-10 12 10v14H10z"/><path d="M18 34v-8h8v8"/></svg>
+          <div><h3>Как в хорошем отеле, только больше места</h3><p>Отельное бельё, ортопедические матрасы, кофемашина, посудомойка и стиральная машина в каждой квартире.</p></div>
+        </li>
+      </ul>
+  </div>
+</section>
+
+
+
+<!-- 7. ОТЗЫВЫ -->
+<section class="section section--cream" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <div><h2>Что говорят гости</h2></div>
+      <div class="reviews-top">
+        <div class="rating-big"><b>4,9</b><span>из 5<br>по 309 отзывам</span></div>
+        <div class="platforms">
+          <a href="#" onclick="return false"><b>★ 4,9</b> Яндекс Карты</a>
+          <a href="#" onclick="return false"><b>★ 9,7</b> Островок</a>
+          <a href="#" onclick="return false"><b>★ 4,9</b> Суточно</a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews reveal" id="reviewsList"></div>
+  </div>
+</section>
+
+<!-- 8. О КОМПАНИИ -->
+<section class="section" id="about">
+  <div class="container about">
+    <figure class="about__photo reveal">
+      <img src="media/maria.jpg" alt="Мария у окна с видом на купол Казанского собора" loading="lazy">
+      <figcaption><b>Мария Соколова</b>основательница «Невского Квартала»</figcaption>
+    </figure>
+    <div class="about__text reveal">
+      
+      <p class="label">О компании</p>
+      <h2>Квартиры, в которых я бы остановилась сама</h2>
+      <p class="lead">Я много путешествую и люблю останавливаться в квартирах. По утрам можно сварить кофе, открыть окно и никуда не торопиться. В 2023 году мне захотелось, чтобы у гостей Петербурга тоже было такое место. Так появился «Невский Квартал».</p>
+      <p>Сегодня у нас 10 апартаментов, и у каждого свой характер. Когда мы их обставляли, я представляла, как здесь пройдёт обычный день гостя: хорошо ли спится, удобно ли готовить завтрак, куда сесть с книгой у окна. Я хочу, чтобы, открыв дверь, вы узнали квартиру с фотографии, а за время поездки успели её полюбить.</p>
+      <h3 class="team-heading">Наша команда</h3>
+      <div class="team">
+        <div class="team__person"><img class="avatar" src="media/anna.jpg" alt="" loading="lazy"><div><b>Анна</b><span>Администратор, отвечает гостям 24/7</span></div></div>
+        <div class="team__person"><img class="avatar" src="media/olga.jpg" alt="" loading="lazy"><div><b>Ольга</b><span>Руководит уборкой и проверяет каждую квартиру</span></div></div>
+        <div class="team__person"><img class="avatar" src="media/dmitry.jpg" alt="" loading="lazy"><div><b>Дмитрий</b><span>Мастер: чинит всё за пару часов</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 10. FAQ -->
+<section class="section section--cream" id="faq">
+  <div class="container faq">
+    <div class="reveal">
+      
+      <h2>Частые вопросы</h2>
+      <p class="muted" style="margin:18px 0 26px">Не нашли ответ? Все правила проживания собраны на отдельной странице.</p>
+      <a href="pravila.html" class="btn btn--dark-line">Все правила и FAQ</a>
+    </div>
+    <div class="faq__list reveal">
+      <details><summary>Можно заехать раньше 15:00?</summary><p>Если накануне квартира свободна — ранний заезд бесплатный. Если нет — с 11:00 можно оставить багаж в квартире и пойти гулять, пока мы убираем.</p></details>
+      <details><summary>Какой залог и когда его вернут?</summary><p>Залог 10 000–20 000 ₽ в зависимости от квартиры, вносится при заезде. Возвращаем в день выезда после проверки квартиры.</p></details>
+      <details><summary>Уборка входит в стоимость проживания?</summary><p>Да, уборка после выезда уже включена в стоимость проживания.</p></details>
+      <details><summary>Можно с домашним животным?</summary><p>Да, в квартирах в спальных районах можно с небольшой собакой или кошкой — доплата за проживание с питомцем — 1 500 ₽ за весь период. В центре, к сожалению, нельзя.</p></details>
+      <details><summary>Есть ли парковка?</summary><p>В студии с видом на залив есть подземный паркинг (500 ₽/сутки). У остальных квартир в спальных районах — бесплатная парковка во дворе. В центре — городская платная парковка.</p></details>
+      <details><summary>Как оплатить предоплату?</summary><p>Картой любого российского банка или по СБП по ссылке, которая придёт в SMS после брони. Для юрлиц — по счёту.</p></details>
+      <details><summary>Вы берёте туристический налог?</summary><p>Нет. Наши апартаменты — жилые помещения, туристический налог на них не распространяется.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. ФИНАЛЬНЫЙ ПРИЗЫВ -->
+<section class="section section--dark" id="contacts">
+  <div class="container cta">
+    <div class="cta__text reveal">
+      
+      <h2>Не нашли подходящие даты?</h2>
+      <p>Напишите, когда и на сколько вы едете. Подберём квартиру или предложим другие варианты. Отвечаем в течение пяти минут круглосуточно.</p>
+      <div class="messengers">
+        <a href="#" onclick="return false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#38BDF6"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5zM9.6 14l8.9-5.6c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.1z"/></svg>Telegram</a>
+        <a href="#" onclick="return false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.3z"/></svg>WhatsApp</a>
+        <a href="#" onclick="return false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="url(#max-brand-gradient)"><defs><linearGradient id="max-brand-gradient" x2="1" y2="1"><stop stop-color="#00BFFF"/><stop offset=".52" stop-color="#471AFF"/><stop offset="1" stop-color="#9500FF"/></linearGradient></defs><path fill-rule="evenodd" d="M12 2a10 10 0 1 1-5.4 18.4L2.8 21l.7-4A10 10 0 0 1 12 2Zm.2 4.8a5.3 5.3 0 0 0-4.4 8.3l-.4 1.7 1.8-.4a5.3 5.3 0 1 0 3-9.6Z"/></svg>MAX</a>
+        <a href="tel:+78120000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+7 (812) 000-00-00</a>
+      </div>
+    </div>
+    <form class="form reveal" id="leadForm">
+      <h3>Подобрать квартиру</h3>
+      <p>Перезвоним или напишем в мессенджер — как вам удобнее.</p>
+      <div class="field"><label for="lName">Имя</label><input id="lName" name="name" required placeholder="Как к вам обращаться"></div>
+      <div class="field"><label for="lPhone">Телефон или Telegram</label><input id="lPhone" name="phone" required placeholder="+7 900 000-00-00"></div>
+      <div class="field"><label for="lWhen">Когда и на сколько едете</label><input id="lWhen" name="when" placeholder="Например: 3 ночи в начале декабря, нас двое"></div>
+      <label class="check"><input type="checkbox" required checked> <span>Согласен(-на) с <a href="documents.html#privacy" target="_blank" rel="noopener">политикой обработки персональных данных</a></span></label>
+      <button class="btn btn--brass btn--full" type="submit">Подобрать квартиру</button>
+      <div class="form__ok"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2"><circle cx="30" cy="30" r="27"/><path d="M19 31l7 7 15-16"/></svg><h3>Спасибо!</h3><p class="muted">Анна напишет вам в течение 5 минут.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- 12. ПОДВАЛ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo__mark">Н</span>Невский Квартал</a>
+        <p>Дизайнерские апартаменты посуточно в Санкт-Петербурге.</p>
+      </div>
+      <div>
+        <h4>Гостям</h4>
+        <ul>
+          <li><a href="index.html#catalog">Наши апартаменты</a></li>
+          <li><a href="index.html#mapToggle">Квартиры на карте</a></li>
+          <li><a href="index.html#reviews">Отзывы гостей</a></li>
+          <li><a href="pravila.html">Правила проживания</a></li>
+          <li><a href="pravila.html#docs">Документы для командировок</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="index.html#about">О компании и команде</a></li>
+          <li><a href="sobstvennikam.html">Собственникам</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Помощь гостям</h4>
+        <ul>
+          <li><a href="index.html#contacts">Связаться с менеджером</a></li>
+          <li><a href="index.html#faq">Частые вопросы</a></li>
+          <li class="footer-messengers"><span>На связи 24/7</span><span class="footer-messengers__icons"><a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#38BDF6"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5zM9.6 14l8.9-5.6c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.1z"/></svg></a><a href="https://web.max.ru/" target="_blank" rel="noopener noreferrer" aria-label="MAX"><svg aria-hidden="true" viewBox="0 0 24 24" fill="url(#footer-max-brand-gradient)"><defs><linearGradient id="footer-max-brand-gradient" x2="1" y2="1"><stop stop-color="#00BFFF"/><stop offset=".52" stop-color="#471AFF"/><stop offset="1" stop-color="#9500FF"/></linearGradient></defs><path fill-rule="evenodd" d="M12 2a10 10 0 1 1-5.4 18.4L2.8 21l.7-4A10 10 0 0 1 12 2Zm.2 4.8a5.3 5.3 0 0 0-4.4 8.3l-.4 1.7 1.8-.4a5.3 5.3 0 1 0 3-9.6Z"/></svg></a><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.3z"/></svg></a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 «Невский Квартал» · <a href="documents.html#privacy">Политика конфиденциальности</a> · <a href="documents.html#offer">Договор оферты</a></span>
+      <span><span class="demo-note">Демо-сайт: компания и квартиры вымышлены.</span> Сайт сделала Екатерина Прохневич</span>
+    </div>
+  </div>
+</footer>
+
+<div class="guest-chat">
+  <button class="guest-chat__toggle" type="button" aria-controls="guest-chat-panel" aria-expanded="false">
+    <span class="guest-chat__teaser"><b>Поможем с выбором</b><small>Какие даты вас интересуют?</small></span>
+    <span class="guest-chat__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 11.5a8 8 0 0 1-8 8 8 8 0 0 1-3.5-.8L4 20l1.2-4.3a8 8 0 1 1 14.8-4.2Z"/><path d="M8 12h8"/></svg>
+    </span>
+  </button>
+  <section id="guest-chat-panel" class="guest-chat__panel" aria-labelledby="guest-chat-title" hidden>
+    <header class="guest-chat__head">
+      <img class="guest-chat__avatar" src="media/anna.jpg" width="40" height="40" alt="">
+      <div class="guest-chat__identity">
+        <h2 id="guest-chat-title">Анна</h2>
+        <small>Администратор</small>
+      </div>
+      <button class="guest-chat__close" type="button" aria-label="Закрыть чат">×</button>
+    </header>
+    <div class="guest-chat__content" role="log" aria-label="Переписка с Анной">
+      <p class="guest-chat__message">Здравствуйте! Поможем подобрать квартиру? Какие даты вас интересуют?</p>
+    </div>
+    <form class="guest-chat__form">
+      <input id="guest-chat-request" name="message" aria-label="Сообщение" placeholder="Напишите сообщение…" required autocomplete="off">
+      <button type="submit" aria-label="Отправить сообщение">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 15-7-5 14-3-6-7-1Zm7 1 8-8"/></svg>
+      </button>
+    </form>
+  </section>
+</div>
+<script src="data.js"></script>
+<script src="main.js"></script><script src="trip.js"></script><script src="hero.js"></script><script src="guest-chat.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

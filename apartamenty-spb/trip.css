@@ -1,0 +1,37 @@
+/* Сценарии поездки */
+.section-intro { margin-bottom: 24px; }
+.section-intro h2 { margin-bottom: 10px; }
+.section-intro p { margin: 0; max-width: 68ch; color: var(--muted); }
+.trip-picker { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 20px; }
+.trip-options { display: grid; grid-template-rows: repeat(4, minmax(56px, 1fr)); gap: 8px; }
+.trip-options button {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 20px; border: 1px solid #d9cebc; border-radius: 8px;
+  background: #f4f0e8; color: #23272b; cursor: pointer; text-align: left;
+  font: 600 clamp(1.3rem, 2.05vw, 1.85rem)/1.1 "Cormorant Garamond", Georgia, serif;
+  transition: background-color .25s, color .25s;
+}
+.trip-options button[aria-pressed="true"] { background: #3e5a4d; border-color: #3e5a4d; color: #fff; }
+.trip-options button:focus-visible, .trip-caption a:focus-visible { outline: 3px solid #b08d57; outline-offset: 3px; }
+.trip-panel { position: relative; display: grid; grid-template-rows: auto 1fr; overflow: hidden; isolation: isolate; border-radius: 12px; background: #23272b; color: #faf8f4; animation: trip-reveal .28s ease-out; }
+.trip-panel[hidden] { display: none; }
+.trip-panel img { display: block; width: 100%; aspect-ratio: 2.15; height: auto; object-fit: cover; object-position: center 42%; }
+.trip-caption { width: 100%; padding: 16px 22px; background: #23272b; }
+.trip-caption h3 { margin: 0 0 5px; color: inherit; }
+.trip-caption p { margin: 0 0 7px; color: inherit; }
+.trip-caption a { color: #f3d7a7; text-decoration: underline; text-underline-offset: 4px; }
+@keyframes trip-reveal { from { opacity: .58; } to { opacity: 1; } }
+@media (max-width: 700px) {
+  .trip-picker { grid-template-columns: 1fr; gap: 14px; }
+  .trip-options { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+  .trip-options button { padding: 10px 12px; font-size: 1.25rem; }
+  .trip-panel img { aspect-ratio: 1.6; }
+  .trip-caption { padding: 14px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trip-panel { animation: none; }
+  .trip-options button { transition: none; }
+}
+
+
+
