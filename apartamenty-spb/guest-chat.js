@@ -8,13 +8,34 @@ const chatInput = document.getElementById("guest-chat-request");
 const chatBadge = guestChat.querySelector(".guest-chat__badge");
 let demoReplyScheduled = false;
 
-async function playChatNotification() {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) return;
+let notificationAudio;
 
-  let audio;
+function prepareChatNotification() {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext || notificationAudio) return;
   try {
-    audio = new AudioContext();
+    notificationAudio = new AudioContext();
+    notificationAudio.resume().catch(() => {});
+  } catch {
+    // The notification badge still works without audio.
+  }
+}
+
+function stopPreparingChatNotification() {
+  document.removeEventListener("click", prepareChatNotification, true);
+  document.removeEventListener("keydown", prepareChatNotification, true);
+}
+
+document.addEventListener("click", prepareChatNotification, true);
+document.addEventListener("keydown", prepareChatNotification, true);
+
+async function playChatNotification() {
+  stopPreparingChatNotification();
+  prepareChatNotification();
+  const audio = notificationAudio;
+  if (!audio) return;
+
+  try {
     const ready = await Promise.race([
       audio.resume().then(() => true),
       new Promise(resolve => window.setTimeout(() => resolve(false), 250)),
@@ -23,18 +44,21 @@ async function playChatNotification() {
       await audio.close();
       return;
     }
-    const start = audio.currentTime;
-    const tone = audio.createOscillator();
-    const volume = audio.createGain();
-    tone.frequency.setValueAtTime(660, start);
-    tone.frequency.setValueAtTime(880, start + 0.09);
-    volume.gain.setValueAtTime(0.001, start);
-    volume.gain.exponentialRampToValueAtTime(0.09, start + 0.015);
-    volume.gain.exponentialRampToValueAtTime(0.001, start + 0.24);
-    tone.connect(volume).connect(audio.destination);
-    tone.onended = () => audio.close().catch(() => {});
-    tone.start(start);
-    tone.stop(start + 0.25);
+    const firstNote = audio.currentTime;
+    [784, 1046.5].forEach((frequency, index) => {
+      const start = firstNote + index * 0.11;
+      const tone = audio.createOscillator();
+      const volume = audio.createGain();
+      tone.type = "sine";
+      tone.frequency.value = frequency;
+      volume.gain.setValueAtTime(0.001, start);
+      volume.gain.exponentialRampToValueAtTime(0.16, start + 0.012);
+      volume.gain.exponentialRampToValueAtTime(0.001, start + 0.19);
+      tone.connect(volume).connect(audio.destination);
+      if (index === 1) tone.onended = () => audio.close().catch(() => {});
+      tone.start(start);
+      tone.stop(start + 0.2);
+    });
   } catch {
     if (audio) audio.close().catch(() => {});
   }
@@ -51,6 +75,8 @@ function setGuestChatOpen(open, restoreFocus = false) {
   chatToggle.setAttribute("aria-expanded", String(open));
   if (open) {
     window.clearTimeout(chatArrival);
+    stopPreparingChatNotification();
+    if (chatBadge.hidden && notificationAudio) notificationAudio.close().catch(() => {});
     chatBadge.hidden = true;
     chatToggle.setAttribute("aria-label", "Чат с администратором");
     chatClose.focus();
