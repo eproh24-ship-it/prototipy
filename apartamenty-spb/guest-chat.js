@@ -5,12 +5,46 @@ const chatClose = guestChat.querySelector(".guest-chat__close");
 const chatMessages = guestChat.querySelector(".guest-chat__content");
 const chatForm = guestChat.querySelector(".guest-chat__form");
 const chatInput = document.getElementById("guest-chat-request");
+const chatBadge = guestChat.querySelector(".guest-chat__badge");
 let demoReplyScheduled = false;
+
+async function playChatNotification() {
+  document.removeEventListener("click", playChatNotification, true);
+  document.removeEventListener("keydown", playChatNotification, true);
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+
+  let audio;
+  try {
+    audio = new AudioContext();
+    await audio.resume();
+    const start = audio.currentTime;
+    const tone = audio.createOscillator();
+    const volume = audio.createGain();
+    tone.frequency.setValueAtTime(660, start);
+    tone.frequency.setValueAtTime(880, start + 0.09);
+    volume.gain.setValueAtTime(0.001, start);
+    volume.gain.exponentialRampToValueAtTime(0.09, start + 0.015);
+    volume.gain.exponentialRampToValueAtTime(0.001, start + 0.24);
+    tone.connect(volume).connect(audio.destination);
+    tone.onended = () => audio.close().catch(() => {});
+    tone.start(start);
+    tone.stop(start + 0.25);
+  } catch {
+    if (audio) audio.close().catch(() => {});
+  }
+}
+
+// Browsers require a user gesture before playing audio.
+document.addEventListener("click", playChatNotification, true);
+document.addEventListener("keydown", playChatNotification, true);
 
 function setGuestChatOpen(open, restoreFocus = false) {
   chatPanel.hidden = !open;
   chatToggle.setAttribute("aria-expanded", String(open));
   if (open) {
+    chatBadge.hidden = true;
+    chatToggle.setAttribute("aria-label", "Чат с администратором");
     chatClose.focus();
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }

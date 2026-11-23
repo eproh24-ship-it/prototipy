@@ -44,3 +44,10 @@
 .guest-chat__form { grid-template-columns: minmax(0, 1fr) 44px; gap: 8px; margin: 0; padding: 10px 14px; border-top: 1px solid #ded6c7; }
 .guest-chat__form button { display: grid; place-items: center; width: 44px; padding: 0; border-radius: 50%; }
 .guest-chat__form button svg { width: 21px; height: 21px; }
+.guest-chat__toggle { position: relative; }
+.guest-chat__badge {
+  position: absolute; top: -4px; right: -4px; display: grid; place-items: center;
+  width: 20px; height: 20px; border: 2px solid #fff; border-radius: 50%;
+  background: #bb2d36; color: #fff; font: 700 11px/1 var(--sans);
+}
+.guest-chat__badge[hidden] { display: none; }
