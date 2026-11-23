@@ -9,15 +9,20 @@ const chatBadge = guestChat.querySelector(".guest-chat__badge");
 let demoReplyScheduled = false;
 
 async function playChatNotification() {
-  document.removeEventListener("click", playChatNotification, true);
-  document.removeEventListener("keydown", playChatNotification, true);
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   if (!AudioContext) return;
 
   let audio;
   try {
     audio = new AudioContext();
-    await audio.resume();
+    const ready = await Promise.race([
+      audio.resume().then(() => true),
+      new Promise(resolve => window.setTimeout(() => resolve(false), 250)),
+    ]);
+    if (!ready || chatBadge.hidden) {
+      await audio.close();
+      return;
+    }
     const start = audio.currentTime;
     const tone = audio.createOscillator();
     const volume = audio.createGain();
@@ -35,14 +40,17 @@ async function playChatNotification() {
   }
 }
 
-// Browsers require a user gesture before playing audio.
-document.addEventListener("click", playChatNotification, true);
-document.addEventListener("keydown", playChatNotification, true);
+const chatArrival = window.setTimeout(() => {
+  chatBadge.hidden = false;
+  chatToggle.setAttribute("aria-label", "Чат с администратором, 1 новое сообщение");
+  playChatNotification();
+}, 1500);
 
 function setGuestChatOpen(open, restoreFocus = false) {
   chatPanel.hidden = !open;
   chatToggle.setAttribute("aria-expanded", String(open));
   if (open) {
+    window.clearTimeout(chatArrival);
     chatBadge.hidden = true;
     chatToggle.setAttribute("aria-label", "Чат с администратором");
     chatClose.focus();
